@@ -67,9 +67,21 @@ const DashboardPage = () => {
         >
           Developer Dashboard
         </h1>
-        <div className="text-sm" style={{ color: colors.secondaryTextColor }}>
-          Welcome back, Developer!
-        </div>
+        <Button
+          variant="primary"
+          onClick={() => {
+            const recentTransactionsSection = document.getElementById('recent-transactions');
+            if (recentTransactionsSection) {
+              recentTransactionsSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }}
+          className="px-6 py-2.5 text-sm font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          My Transaction
+        </Button>
       </div>
 
       {error && (
@@ -294,7 +306,7 @@ const DashboardPage = () => {
       {/* Recent Transactions and Webhook Management - Side by Side */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Transactions */}
-        <div className="w-full">
+        <div id="recent-transactions" className="w-full">
           <Card>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
               <h3 

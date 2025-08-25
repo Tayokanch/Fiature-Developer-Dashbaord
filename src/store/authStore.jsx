@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     // For development: use hardcoded token, fallback to localStorage
     const hardcodedToken =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOnsidmFsaWQiOnRydWUsInVzZXJJZCI6ImI1NjgzMmNlLWI3MGQtNDAyZS04ODRiLTlmYzVmYjk3MjFiMSJ9LCJpYXQiOjE3NTYxMjg3MTIsImV4cCI6MTc1NjEyOTYxMn0.-g2z54XDMlEFDjRS69sDgoz1_k5WvfX8mnidVG13EX0';
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOnsidmFsaWQiOnRydWUsInVzZXJJZCI6ImI1NjgzMmNlLWI3MGQtNDAyZS04ODRiLTlmYzVmYjk3MjFiMSJ9LCJpYXQiOjE3NTYxMzEzNDksImV4cCI6MTc1NjEzMjI0OX0.KdJOZx58LFHZxjJ3zd_Kpw3-kOs8qnRHd9sUacriFQA';
     const storedToken = localStorage.getItem('authToken');
     const tokenToUse = hardcodedToken || storedToken;
 
